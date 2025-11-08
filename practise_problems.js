@@ -25,9 +25,15 @@ const stargazingLog = function () {
   console.log([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const birdWatch = function () {
+  console.log(heading("Bird Watching"));
+  console.log(["sparrow", "crow", "sparrow", "eagle", "crow"].reduce(selectDistinct, []));
+}
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
+  birdWatch();
 };
 
 main();
