@@ -28,12 +28,18 @@ const stargazingLog = function () {
 const birdWatch = function () {
   console.log(heading("Bird Watching"));
   console.log(["sparrow", "crow", "sparrow", "eagle", "crow"].reduce(selectDistinct, []));
-}
+};
+
+const attendanceCheck = function () {
+  console.log(heading("Classroom Attendance Check"));
+  console.log([["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]].flatMap(x => x).reduce(selectDistinct, []));
+};
 
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
   birdWatch();
+  attendanceCheck();
 };
 
 main();
