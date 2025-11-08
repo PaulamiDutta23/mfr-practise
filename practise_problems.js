@@ -23,6 +23,11 @@ const countDune = (prevCount, element) => {
 
 const doesSoExist = element => element.includes("so");
 
+const countDeer = (prevCount, element) => {
+  const count = element === "deer" ? prevCount + 1 : prevCount;
+  return count;
+};
+
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
@@ -98,6 +103,11 @@ const findUniqueParcelSize = function () {
   console.log(["small", "large", "medium", "small"].reduce(selectDistinct, []));
 };
 
+const countWildlifeSighting = function () {
+  console.log(heading("Wildlife Sighting"));
+  console.log(["deer", "deer", "rabbit", "deer"].reduce(countDeer, 0));
+};
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
@@ -113,6 +123,7 @@ const main = function () {
   doesContainMusicSequence();
   countCrateTotal();
   findUniqueParcelSize();
+  countWildlifeSighting();
 };
 
 main();
