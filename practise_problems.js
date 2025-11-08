@@ -12,6 +12,10 @@ const selectDistinct = (result, element) => {
 
 const addElements = (result, element) => result + element;
 
+const doesDoExist = (element) => {
+  return element.includes("do");
+};
+
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
@@ -37,17 +41,23 @@ const attendanceCheck = function () {
   console.log([["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const candyJarStock = function () {
+const countCandyJarStock = function () {
   console.log(heading("Candy Jar Stock"));
   console.log([[5, 3], [2], [4, 1]].flatMap(x => x).reduce(addElements, 0));
 };
+
+const doesContainMusicalNote = function () {
+  console.log(heading("Music Reharshal Note"));
+  console.log([["mi", "fa", "so"], ["do", "mi"], ["fa"]].some(doesDoExist));
+}; 
 
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
   birdWatch();
   attendanceCheck();
-  candyJarStock();
+  countCandyJarStock();
+  doesContainMusicalNote();
 };
 
 main();
