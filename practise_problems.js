@@ -32,28 +32,28 @@ const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
 
-const festivalRibbonCount = function () {
+const countfestivalRibbon = function () {
   console.log(heading("Festival Ribbon Count"));
   console.log(["red", "blue", "red", "green", "red", "blue"].reduce(blueCount, 0));
   console.log(["red", "blue", "red", "blue", "red", "blue"].reduce(blueCount, 0));
 };
 
-const stargazingLog = function () {
+const findUniqueConstellation = function () {
   console.log(heading("Stargazing Log"));
   console.log([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const birdWatch = function () {
+const findUniqueBird = function () {
   console.log(heading("Bird Watching"));
   console.log(["sparrow", "crow", "sparrow", "eagle", "crow"].reduce(selectDistinct, []));
 };
 
-const attendanceCheck = function () {
+const findUniqueStudent = function () {
   console.log(heading("Classroom Attendance Check"));
   console.log([["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const countCandyJarStock = function () {
+const addCandyJarStock = function () {
   console.log(heading("Candy Jar Stock"));
   console.log([[5, 3], [2], [4, 1]].flatMap(x => x).reduce(addElements, 0));
 };
@@ -68,7 +68,7 @@ const doAllTemperatureSheetContainLesser32 = function () {
   console.log([[22, 23], [25, 24, 22], [29]].every(doAllLesser32));
 };
 
-const countMiles = function () {
+const addMiles = function () {
   console.log(heading("Fitness Tracker Miles"));
   console.log([[2, 3, 2], [4], [1, 1]].flatMap(x => x).reduce(addElements, 0));
 };
@@ -83,7 +83,7 @@ const countReturnedBook = function () {
   console.log(["Dune", "Dune", "Foundation", "Dune"].reduce(countDune, 0));
 };
 
-const lunchboxIngredient = function () {
+const findUniqueLunchboxIngredient = function () {
   console.log(heading("Lunchbox Ingredient Inventory"));
   console.log([["rice", "lentils"], ["rice"], ["curd", "lentils"]].flatMap(x => x).reduce(selectDistinct, [])); 
 };
@@ -93,7 +93,7 @@ const doesContainMusicSequence = function () {
   console.log([["la", "la"], ["mi"], ["so", "la"]].some(doesSoExist));
 };
 
-const countCrateTotal = function () {
+const addCrateWeight = function () {
   console.log(heading("Vegetable Crate Total"));
   console.log([[4, 6], [2, 3, 1], [5]].flatMap(x => x).reduce(addElements, 0));
 };
@@ -109,19 +109,19 @@ const countWildlifeSighting = function () {
 };
 
 const main = function () {
-  festivalRibbonCount();
-  stargazingLog();
-  birdWatch();
-  attendanceCheck();
-  countCandyJarStock();
+  countfestivalRibbon();
+  findUniqueConstellation();
+  findUniqueBird();
+  findUniqueStudent();
+  addCandyJarStock();
   doesContainMusicalNote();
   doAllTemperatureSheetContainLesser32();
-  countMiles();
+  addMiles();
   findUniqueColorsUsed();
   countReturnedBook();
-  lunchboxIngredient();
+  findUniqueLunchboxIngredient();
   doesContainMusicSequence();
-  countCrateTotal();
+  addCrateWeight();
   findUniqueParcelSize();
   countWildlifeSighting();
 };
