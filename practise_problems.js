@@ -93,6 +93,11 @@ const countCrateTotal = function () {
   console.log([[4, 6], [2, 3, 1], [5]].flatMap(x => x).reduce(addElements, 0));
 };
 
+const findUniqueParcelSize = function () {
+  console.log(heading("Post Office Parcel Size"));
+  console.log(["small", "large", "medium", "small"].reduce(selectDistinct, []));
+};
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
@@ -107,6 +112,7 @@ const main = function () {
   lunchboxIngredient();
   doesContainMusicSequence();
   countCrateTotal();
+  findUniqueParcelSize();
 };
 
 main();
