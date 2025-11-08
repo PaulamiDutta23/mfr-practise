@@ -56,6 +56,11 @@ const doAllTemperatureSheetContainLesser32 = function () {
   console.log([[22, 23], [25, 24, 22], [29]].every(doAllLesser32));
 };
 
+const countMiles = function () {
+  console.log(heading("Fitness Tracker Miles"));
+  console.log([[2, 3, 2], [4], [1, 1]].flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
@@ -64,6 +69,7 @@ const main = function () {
   countCandyJarStock();
   doesContainMusicalNote();
   doAllTemperatureSheetContainLesser32();
+  countMiles();
 };
 
 main();
