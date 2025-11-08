@@ -88,6 +88,11 @@ const doesContainMusicSequence = function () {
   console.log([["la", "la"], ["mi"], ["so", "la"]].some(doesSoExist));
 };
 
+const countCrateTotal = function () {
+  console.log(heading("Vegetable Crate Total"));
+  console.log([[4, 6], [2, 3, 1], [5]].flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
@@ -101,6 +106,7 @@ const main = function () {
   countReturnedBook();
   lunchboxIngredient();
   doesContainMusicSequence();
+  countCrateTotal();
 };
 
 main();
