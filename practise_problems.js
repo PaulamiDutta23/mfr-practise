@@ -21,6 +21,8 @@ const countDune = (prevCount, element) => {
   return count;
 };
 
+const doesSoExist = element => element.includes("so");
+
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
@@ -81,6 +83,11 @@ const lunchboxIngredient = function () {
   console.log([["rice", "lentils"], ["rice"], ["curd", "lentils"]].flatMap(x => x).reduce(selectDistinct, [])); 
 };
 
+const doesContainMusicSequence = function () {
+  console.log(heading("Choir Harmony Review"));
+  console.log([["la", "la"], ["mi"], ["so", "la"]].some(doesSoExist));
+};
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
@@ -93,6 +100,7 @@ const main = function () {
   findUniqueColorsUsed();
   countReturnedBook();
   lunchboxIngredient();
+  doesContainMusicSequence();
 };
 
 main();
