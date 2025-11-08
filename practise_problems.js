@@ -1,5 +1,5 @@
-const blueCount = (currentCount, element) => {
-  const count = element === "blue" ? currentCount + 1 : currentCount;
+const blueCount = (prevCount, element) => {
+  const count = element === "blue" ? prevCount + 1 : prevCount;
   return count;
 };
 
@@ -15,6 +15,11 @@ const addElements = (result, element) => result + element;
 const doesDoExist = element => element.includes("do");
 
 const doAllLesser32 = element => element.every(x => x < 32);
+
+const countDune = (prevCount, element) => {
+  const count = element === "Dune" ? prevCount + 1 : prevCount;
+  return count;
+};
 
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
@@ -64,7 +69,12 @@ const countMiles = function () {
 const findUniqueColorsUsed = function () {
   console.log(heading("Art Workshop Color Variety"));
   console.log([["blue", "yellow"], ["yellow", "green"], ["blue"]].flatMap(x => x).reduce(selectDistinct, []));
-}
+};
+
+const countReturnedBook = function () {
+  console.log(heading("Library Return Counter"));
+  console.log(["Dune", "Dune", "Foundation", "Dune"].reduce(countDune, 0));
+};
 
 const main = function () {
   festivalRibbonCount();
@@ -76,6 +86,7 @@ const main = function () {
   doAllTemperatureSheetContainLesser32();
   countMiles();
   findUniqueColorsUsed();
+  countReturnedBook();
 };
 
 main();
