@@ -61,6 +61,11 @@ const countMiles = function () {
   console.log([[2, 3, 2], [4], [1, 1]].flatMap(x => x).reduce(addElements, 0));
 };
 
+const findUniqueColorsUsed = function () {
+  console.log(heading("Art Workshop Color Variety"));
+  console.log([["blue", "yellow"], ["yellow", "green"], ["blue"]].flatMap(x => x).reduce(selectDistinct, []));
+}
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
@@ -70,6 +75,7 @@ const main = function () {
   doesContainMusicalNote();
   doAllTemperatureSheetContainLesser32();
   countMiles();
+  findUniqueColorsUsed();
 };
 
 main();
