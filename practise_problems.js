@@ -12,9 +12,9 @@ const selectDistinct = (result, element) => {
 
 const addElements = (result, element) => result + element;
 
-const doesDoExist = (element) => {
-  return element.includes("do");
-};
+const doesDoExist = element => element.includes("do");
+
+const doAllLesser32 = element => element.every(x => x < 32);
 
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
@@ -51,6 +51,11 @@ const doesContainMusicalNote = function () {
   console.log([["mi", "fa", "so"], ["do", "mi"], ["fa"]].some(doesDoExist));
 }; 
 
+const doAllTemperatureSheetContainLesser32 = function () {
+  console.log(heading("Weather Sensor Validation"));
+  console.log([[22, 23], [25, 24, 22], [29]].every(doAllLesser32));
+};
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
@@ -58,6 +63,7 @@ const main = function () {
   attendanceCheck();
   countCandyJarStock();
   doesContainMusicalNote();
+  doAllTemperatureSheetContainLesser32();
 };
 
 main();
