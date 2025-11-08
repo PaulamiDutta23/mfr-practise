@@ -10,6 +10,8 @@ const selectDistinct = (result, element) => {
   return result;
 };
 
+const addElements = (result, element) => result + element;
+
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
@@ -35,11 +37,17 @@ const attendanceCheck = function () {
   console.log([["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const candyJarStock = function () {
+  console.log(heading("Candy Jar Stock"));
+  console.log([[5, 3], [2], [4, 1]].flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
   birdWatch();
   attendanceCheck();
+  candyJarStock();
 };
 
 main();
