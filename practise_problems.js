@@ -76,6 +76,11 @@ const countReturnedBook = function () {
   console.log(["Dune", "Dune", "Foundation", "Dune"].reduce(countDune, 0));
 };
 
+const lunchboxIngredient = function () {
+  console.log(heading("Lunchbox Ingredient Inventory"));
+  console.log([["rice", "lentils"], ["rice"], ["curd", "lentils"]].flatMap(x => x).reduce(selectDistinct, [])); 
+};
+
 const main = function () {
   festivalRibbonCount();
   stargazingLog();
@@ -87,6 +92,7 @@ const main = function () {
   countMiles();
   findUniqueColorsUsed();
   countReturnedBook();
+  lunchboxIngredient();
 };
 
 main();
