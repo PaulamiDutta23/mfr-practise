@@ -4,6 +4,8 @@ const doesSoExist = element => element.includes("so");
 
 const doesTurnExist = element => element.includes("turn");
 
+const doesExistAbove7 = element => element.some(x => x > 7);
+
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
@@ -23,10 +25,16 @@ const doesContainDanceStep = function () {
   console.log([["step", "tap"], ["turn", "step"]].some(doesTurnExist));
 };
 
+const doesContainMeasurement = function () {
+  console.log(heading("Fish Tank Measurement"));
+  console.log([[5, 6], [7], [6]].some(doesExistAbove7));
+};
+
 const main = function () {
   doesContainMusicalNote();
   doesContainMusicSequence();
   doesContainDanceStep();
+  doesContainMeasurement();
 };
 
 main();
