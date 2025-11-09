@@ -29,12 +29,18 @@ const addCraneNumber = function () {
   console.log([[3, 2], [1], [4]].flatMap(x => x).reduce(addElements, 0));
 };
 
+const addDistributedPenNumber = function () {
+  console.log(heading("Classroom Pen Distribution"));
+  console.log([[2, 3], [1], [3, 2]].flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
   addCrateWeight();
   addWaterAmount();
   addCraneNumber();
+  addDistributedPenNumber();
 };
 
 main();
