@@ -44,6 +44,11 @@ const findUniqueChapters = function () {
   console.log([[1, 2], [3], [2, 4, 1]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const finduniqueFruitUsed = function () {
+  console.log(heading("Fruit Basket Inventory"));
+  console.log([["apple", "banana"], ["apple"], ["apple", "orange"]].flatMap(x => x).reduce(selectDistinct, []));
+}; 
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -52,6 +57,7 @@ const main = function () {
   findUniqueLunchboxIngredient();
   findUniqueParcelSize();
   findUniqueChapters();
+  finduniqueFruitUsed();
 };
 
 main();
