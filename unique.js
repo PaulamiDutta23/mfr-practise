@@ -49,6 +49,11 @@ const finduniqueFruitUsed = function () {
   console.log([["apple", "banana"], ["apple"], ["apple", "orange"]].flatMap(x => x).reduce(selectDistinct, []));
 }; 
 
+const findUniqueMovieTitle = function () {
+  console.log(heading("Movie Marathon Titles"));
+  console.log([["Inception", "Dunkirk"], ["Interstellar"], ["Inception"]].flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -58,6 +63,7 @@ const main = function () {
   findUniqueParcelSize();
   findUniqueChapters();
   finduniqueFruitUsed();
+  findUniqueMovieTitle();
 };
 
 main();
