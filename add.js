@@ -1,94 +1,92 @@
 const addElements = (result, element) => result + element;
 
-const heading = function (text) {
-  return `\n${text}\n${"-".repeat(text.length)}\n`;
-};
+const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
 
-const addCandyJarStock = function () {
+const addCandyJarStock = data => {
   console.log(heading("Candy Jar Stock"));
-  console.log([[5, 3], [2], [4, 1]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addMiles = function () {
+const addMiles = data => {
   console.log(heading("Fitness Tracker Miles"));
-  console.log([[2, 3, 2], [4], [1, 1]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addCrateWeight = function () {
+const addCrateWeight = data => {
   console.log(heading("Vegetable Crate Total"));
-  console.log([[4, 6], [2, 3, 1], [5]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addWaterAmount = function () {
+const addWaterAmount = data => {
   console.log(heading("Garden Watering Amount"));
-  console.log([[1, 2, 1], [3], [2]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addCraneNumber = function () {
+const addCraneNumber = data => {
   console.log(heading("Paper Crane Making"));
-  console.log([[3, 2], [1], [4]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addDistributedPenNumber = function () {
+const addDistributedPenNumber = data => {
   console.log(heading("Classroom Pen Distribution"));
-  console.log([[2, 3], [1], [3, 2]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addRepititions = function () {
+const addRepititions = data => {
   console.log(heading("Morning Exercise Count"));
-  console.log([[10, 20], [5], [15, 10]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addPages = function () {
+const addPages = data => {
   console.log(heading("Book Club Read Pages"));
-  console.log([[12, 10], [5], [8, 7]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addStandWeight = function () {
+const addStandWeight = data => {
   console.log(heading("Fruit Stand Weight"));
-  console.log([[4, 3], [2], [3, 1]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addLaps = function () {
+const addLaps = data => {
   console.log(heading("Jogging Laps Count"));
-  console.log([[2, 3, 2], [1], [4]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addGymRoutine = function () {
+const addGymRoutine = data => {
   console.log(heading("Gym Routine Count"));
-  console.log([[6, 4], [3, 2]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addCandyNumber = function () {
+const addCandyNumber = data => {
   console.log(heading("Candy Distribution"));
-  console.log([[1, 2, 3], [2]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addTrainPassengerNumber = function () {
+const addTrainPassengerNumber = data => {
   console.log(heading("Train Car Passenger Check"));
-  console.log([[10, 12], [15]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const addGroceryQuantities = function () {
+const addGroceryQuantities = data => {
   console.log(heading("Weekly Grocery Tally"));
-  console.log([[3, 5], [2, 1]].flat().reduce(addElements, 0));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
-const main = function () {
-  addCandyJarStock();
-  addMiles();
-  addCrateWeight();
-  addWaterAmount();
-  addCraneNumber();
-  addDistributedPenNumber();
-  addRepititions();
-  addPages();
-  addStandWeight();
-  addLaps();
-  addGymRoutine();
-  addCandyNumber();
-  addTrainPassengerNumber();
-  addGroceryQuantities();
+const main = () => {
+  addCandyJarStock([[5, 3], [2], [4, 1]]);
+  addMiles([[2, 3, 2], [4], [1, 1]]);
+  addCrateWeight([[4, 6], [2, 3, 1], [5]]);
+  addWaterAmount([[1, 2, 1], [3], [2]]);
+  addCraneNumber([[3, 2], [1], [4]]);
+  addDistributedPenNumber([[2, 3], [1], [3, 2]]);
+  addRepititions([[10, 20], [5], [15, 10]]);
+  addPages([[12, 10], [5], [8, 7]]);
+  addStandWeight([[4, 3], [2], [3, 1]]);
+  addLaps([[2, 3, 2], [1], [4]]);
+  addGymRoutine([[6, 4], [3, 2]]);
+  addCandyNumber([[1, 2, 3], [2]]);
+  addTrainPassengerNumber([[10, 12], [15]]);
+  addGroceryQuantities([[3, 5], [2, 1]]);
 };
 
 main();
