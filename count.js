@@ -1,63 +1,36 @@
-const blueCount = (prevCount, element) => {
-  const count = element === "blue" ? prevCount + 1 : prevCount;
-  return count;
-};
+const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
 
-const countDune = (prevCount, element) => {
-  const count = element === "Dune" ? prevCount + 1 : prevCount;
-  return count;
-};
-
-const countDeer = (prevCount, element) => {
-  const count = element === "deer" ? prevCount + 1 : prevCount;
-  return count;
-};
-
-const countChocolate = (prevCount, element) => {
-  const count = element.includes("chocolate") ? prevCount + 1 : prevCount;
-  return count;
-};
-
-const countTrack1 = (prevCount, element) => {
-  const count = element === "track1" ? prevCount + 1 : prevCount;
-  return count;
-};
-
-const heading = function (text) {
-  return `\n${text}\n${"-".repeat(text.length)}\n`;
-};
-
-const countfestivalRibbon = function () {
+const countfestivalRibbon = data => {
   console.log(heading("Festival Ribbon Count"));
-  console.log(["red", "blue", "red", "green", "red", "blue"].reduce(blueCount, 0));
+  console.log(data.reduce((x, y) => y === "blue" ? x + 1 : x, 0));
 };
 
-const countReturnedBook = function () {
+const countReturnedBook = data => {
   console.log(heading("Library Return Counter"));
-  console.log(["Dune", "Dune", "Foundation", "Dune"].reduce(countDune, 0));
+  console.log(data.reduce((x, y) => y === "Dune" ? x + 1 : x, 0));
 };
 
-const countWildlifeSighting = function () {
+const countWildlifeSighting = data => {
   console.log(heading("Wildlife Sighting"));
-  console.log(["deer", "deer", "rabbit", "deer"].reduce(countDeer, 0));
+  console.log(data.reduce((x, y) => y === "deer" ? x + 1 : x, 0));
 };
 
-const countIceCreamOrder = function () {
+const countIceCreamOrder = data => {
   console.log(heading("Ice Cream Orders"));
-  console.log([["vanilla", "chocolate"], ["strawberry"], ["chocolate"]].reduce(countChocolate, 0));
+  console.log(data.flatMap(x => x).reduce((x, y) => y === "chocolate" ? x + 1 : x, 0));
 };
 
-const countPlaylistTrack = function () {
+const countPlaylistTrack = data => {
   console.log(heading("Music Playlist Repeats"));
-  console.log(["track1", "track2", "track1"].reduce(countTrack1, 0));
+  console.log(data.reduce((x, y) => y === "track1" ? x + 1 : x, 0));
 };
 
-const main = function () {
-  countfestivalRibbon();
-  countReturnedBook();
-  countWildlifeSighting();
-  countIceCreamOrder();
-  countPlaylistTrack();
+const main = () => {
+  countfestivalRibbon(["red", "blue", "red", "green", "red", "blue"]);
+  countReturnedBook(["Dune", "Dune", "Foundation", "Dune"]);
+  countWildlifeSighting(["deer", "deer", "rabbit", "deer"]);
+  countIceCreamOrder([["vanilla", "chocolate"], ["strawberry"], ["chocolate"]]);
+  countPlaylistTrack(["track1", "track2", "track1"]);
 };
 
 main();
