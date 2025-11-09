@@ -77,6 +77,11 @@ const addCoinsTally = data => {
   console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
+const combineWords = data => {
+  console.log(heading("Words in Worksheets"));
+  console.log(data.flatMap(x => x).reduce(addElements, ""));
+};
+
 const main = () => {
   addCandyJarStock([[5, 3], [2], [4, 1]]);
   addMiles([[2, 3, 2], [4], [1, 1]]);
@@ -93,6 +98,7 @@ const main = () => {
   addTrainPassengerNumber([[10, 12], [15]]);
   addGroceryQuantities([[3, 5], [2, 1]]);
   addCoinsTally([[1, 1, 2], [2, 1]]);
+  combineWords([["hi", "good"], ["morning"], ["students"]]);
 };
 
 main();
