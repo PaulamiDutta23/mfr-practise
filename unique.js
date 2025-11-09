@@ -94,6 +94,11 @@ const findUniqueParticipant = function () {
   console.log([["Tom", "Jerry"], ["Jerry", "Spike"]].flat().filter(isDistinct));
 };
 
+const findUniqueStars = function () {
+  console.log(heading("Space Camp Star Names"));
+  console.log([["Vega", "Sirius"], ["Vega", "Rigel"]].flat().filter(isDistinct));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -113,6 +118,7 @@ const main = function () {
   findUniquePoetryWords();
   findUniqueGiftItems();
   findUniqueParticipant();
+  findUniqueStars();
 };
 
 main();
