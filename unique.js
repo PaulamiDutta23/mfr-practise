@@ -125,6 +125,11 @@ const findUniqueMovieGenre = data => {
   console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const findUniqueBirdSpecies = data => {
+  console.log(heading("Bird Species Records in Trip"));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = () => {
   findUniqueConstellation([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]]);
   findUniqueBird(["sparrow", "crow", "sparrow", "eagle", "crow"]);
@@ -149,6 +154,7 @@ const main = () => {
   findUniqueDrawingTools([["pencil", "charcoal"], ["ink"], ["pencil"]]);
   findUniqueCookingSpices([["salt", "pepper"], ["turmeric"], ["salt"]]);
   findUniqueMovieGenre([["horror", "comedy"], ["thriller", "horror"], ["fantasy"]]);
+  findUniqueBirdSpecies([["pigeon", "crow"], ["crow"], ["sparrow", "crow"]]);
 };
 
 main();
