@@ -145,6 +145,11 @@ const findUniqueToppings = data => {
   console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const findUniqueColors = data => {
+  console.log(heading("Color Swatches"));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = () => {
   findUniqueConstellation([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]]);
   findUniqueBird(["sparrow", "crow", "sparrow", "eagle", "crow"]);
@@ -173,6 +178,7 @@ const main = () => {
   findUniqueIceCreamFlavor([["vanilla", "chocolate"], ["strawberry"], ["chocolate"]]);
   findUniqueRecipeIngredients([["salt", "water"], ["sugar", "water", "vegetables"]]);
   findUniqueToppings([["cheese", "onion"], ["tomato"], ["cheese"]]);
+  findUniqueColors([["blue", "yellow"], ["red", "green"], ["blue"]]);
 };
 
 main();
