@@ -39,6 +39,11 @@ const addRepititions = function () {
   console.log([[10, 20], [5], [15, 10]].flat().reduce(addElements, 0));
 };
 
+const addPages = function () {
+  console.log(heading("Book Club Read Pages"));
+  console.log([[12, 10], [5], [8, 7]].flat().reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
@@ -47,6 +52,7 @@ const main = function () {
   addCraneNumber();
   addDistributedPenNumber();
   addRepititions();
+  addPages();
 };
 
 main();
