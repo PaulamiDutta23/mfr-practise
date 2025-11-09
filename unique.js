@@ -105,6 +105,11 @@ const findUniqueStars = data => {
   console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const findUniqueTeaFlavors = data => {
+  console.log(heading("Tea Tasting Flavors"));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = () => {
   findUniqueConstellation([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]]);
   findUniqueBird(["sparrow", "crow", "sparrow", "eagle", "crow"]);
@@ -125,6 +130,7 @@ const main = () => {
   findUniqueGiftItems([["toy", "sticker"], ["candy", "sticker"]]);
   findUniqueParticipant([["Tom", "Jerry"], ["Jerry", "Spike"]]);
   findUniqueStars([["Vega", "Sirius"], ["Vega", "Rigel"]]);
+  findUniqueTeaFlavors(["mint", "ginger"], ["lemon"], ["mint"]);
 };
 
 main();
