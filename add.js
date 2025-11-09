@@ -19,10 +19,16 @@ const addCrateWeight = function () {
   console.log([[4, 6], [2, 3, 1], [5]].flatMap(x => x).reduce(addElements, 0));
 };
 
+const addWaterAmount = function () {
+  console.log(heading("Garden Watering Amount"));
+  console.log([[1, 2, 1], [3], [2]].flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
   addCrateWeight();
+  addWaterAmount();
 };
 
 main();
