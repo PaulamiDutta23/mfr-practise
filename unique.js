@@ -120,6 +120,11 @@ const findUniqueCookingSpices = data => {
   console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const findUniqueMovieGenre = data => {
+  console.log(heading("Movie Genres"));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = () => {
   findUniqueConstellation([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]]);
   findUniqueBird(["sparrow", "crow", "sparrow", "eagle", "crow"]);
@@ -143,6 +148,7 @@ const main = () => {
   findUniqueTeaFlavors([["mint", "ginger"], ["lemon"], ["mint"]]);
   findUniqueDrawingTools([["pencil", "charcoal"], ["ink"], ["pencil"]]);
   findUniqueCookingSpices([["salt", "pepper"], ["turmeric"], ["salt"]]);
+  findUniqueMovieGenre([["horror", "comedy"], ["thriller", "horror"], ["fantasy"]]);
 };
 
 main();
