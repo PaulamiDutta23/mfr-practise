@@ -39,6 +39,11 @@ const findUniqueParcelSize = function () {
   console.log(["small", "large", "medium", "small"].reduce(selectDistinct, []));
 };
 
+const findUniqueChapters = function () {
+  console.log(heading("Study Group Completion"));
+  console.log([[1, 2], [3], [2, 4, 1]].flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -46,6 +51,7 @@ const main = function () {
   findUniqueColorsUsed();
   findUniqueLunchboxIngredient();
   findUniqueParcelSize();
+  findUniqueChapters();
 };
 
 main();
