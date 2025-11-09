@@ -59,6 +59,11 @@ const findUniqueAttendees = function () {
   console.log(["A", "B", "A", "C", "B"].reduce(selectDistinct, []));
 };
 
+const findUniqueFlowersUsed = function () {
+  console.log(heading("Flowers in Bouquets"));
+  console.log([["rose", "lily"], ["lily", "tulip"]].flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -70,6 +75,7 @@ const main = function () {
   finduniqueFruitUsed();
   findUniqueMovieTitle();
   findUniqueAttendees();
+  findUniqueFlowersUsed();
 };
 
 main();
