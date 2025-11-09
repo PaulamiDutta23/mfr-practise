@@ -79,6 +79,11 @@ const findUniqueOrderIngredient = function () {
   console.log([["cheese", "bread"], ["tomato"], ["bread"]].flat().filter(isDistinct));
 };
 
+const findUniquePoetryWords = function () {
+  console.log(heading("Strudent Poetry Words"));
+  console.log([["sky", "blue"], ["night"], ["sky", "dark"]].flat().filter(isDistinct));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -95,6 +100,7 @@ const main = function () {
   findUniqueSnackServed();
   findUniquePhotoThemes();
   findUniqueOrderIngredient();
+  findUniquePoetryWords();
 };
 
 main();
