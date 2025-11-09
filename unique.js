@@ -54,6 +54,11 @@ const findUniqueMovieTitle = function () {
   console.log([["Inception", "Dunkirk"], ["Interstellar"], ["Inception"]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const findUniqueAttendees = function () {
+  console.log(heading("Name Badge Sorting"));
+  console.log(["A", "B", "A", "C", "B"].reduce(selectDistinct, []));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -64,6 +69,7 @@ const main = function () {
   findUniqueChapters();
   finduniqueFruitUsed();
   findUniqueMovieTitle();
+  findUniqueAttendees();
 };
 
 main();
