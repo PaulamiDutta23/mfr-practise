@@ -49,6 +49,11 @@ const addStandWeight = function () {
   console.log([[4, 3], [2], [3, 1]].flat().reduce(addElements, 0));
 };
 
+const addLaps = function () {
+  console.log(heading("Jogging Laps Count"));
+  console.log([[2, 3, 2], [1], [4]].flat().reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
@@ -59,6 +64,7 @@ const main = function () {
   addRepititions();
   addPages();
   addStandWeight();
+  addLaps();
 };
 
 main();
