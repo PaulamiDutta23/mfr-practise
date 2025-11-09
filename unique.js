@@ -1,3 +1,5 @@
+const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
+
 const selectDistinct = (prevResult, element) => {
   const result = prevResult.slice();
 
@@ -8,146 +10,146 @@ const selectDistinct = (prevResult, element) => {
   return result;
 };
 
-const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
+const uniqueOf = data => data.flatMap(x => x).reduce(selectDistinct, []);
 
 const findUniqueConstellation = data => {
   console.log(heading("Stargazing Log"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueBird = data => {
   console.log(heading("Bird Watching"));
-  console.log(data.reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueStudent = data => {
   console.log(heading("Classroom Attendance Check"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueColorsUsed = data => {
   console.log(heading("Art Workshop Color Variety"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueLunchboxIngredient = data => {
   console.log(heading("Lunchbox Ingredient Inventory"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueParcelSize = data => {
   console.log(heading("Post Office Parcel Size"));
-  console.log(data.reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueChapters = data => {
   console.log(heading("Study Group Completion"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const finduniqueFruitUsed = data => {
   console.log(heading("Fruit Basket Inventory"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 }; 
 
 const findUniqueMovieTitle = data => {
   console.log(heading("Movie Marathon Titles"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueAttendees = data => {
   console.log(heading("Name Badge Sorting"));
-  console.log(data.reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueFlowersUsed = data => {
   console.log(heading("Flowers in Bouquets"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueStationNames = data => {
   console.log(heading("Train Station Annnouncements"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueSnackServed = data => {
   console.log(heading("School Snack List"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniquePhotoThemes = data => {
   console.log(heading("Photo Contest Entries"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueOrderIngredient = data => {
   console.log(heading("Cafe Order Ingredients"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniquePoetryWords = data => {
   console.log(heading("Strudent Poetry Words"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueGiftItems = data => {
   console.log(heading("Gift Box Items"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueParticipant = data => {
   console.log(heading("Workshop Attendance"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueStars = data => {
   console.log(heading("Space Camp Star Names"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueTeaFlavors = data => {
   console.log(heading("Tea Tasting Flavors"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueDrawingTools = data => {
   console.log(heading("Drawing Class Tools"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueCookingSpices = data => {
   console.log(heading("Cooking Class Spices"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueMovieGenre = data => {
   console.log(heading("Movie Genres"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueBirdSpecies = data => {
   console.log(heading("Bird Species Records in Trip"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueIceCreamFlavor = data => {
   console.log(heading("Ice Cream Tasting Event"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueRecipeIngredients = data => {
   console.log(heading("Recipe Ingredients"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueToppings = data => {
   console.log(heading("Chosen Toppings for Pizza"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const findUniqueColors = data => {
   console.log(heading("Color Swatches"));
-  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+  console.log(uniqueOf(data));
 };
 
 const main = () => {

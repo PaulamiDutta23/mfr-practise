@@ -1,100 +1,102 @@
+const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
+
 const addElements = (result, element) => result + element;
 
-const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
+const sumOfList = (data, result) => data.flatMap(x => x).reduce(addElements, result);
 
 const addCandyJarStock = data => {
   console.log(heading("Candy Jar Stock"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addMiles = data => {
   console.log(heading("Fitness Tracker Miles"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addCrateWeight = data => {
   console.log(heading("Vegetable Crate Total"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addWaterAmount = data => {
   console.log(heading("Garden Watering Amount"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addCraneNumber = data => {
   console.log(heading("Paper Crane Making"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addDistributedPenNumber = data => {
   console.log(heading("Classroom Pen Distribution"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addRepititions = data => {
   console.log(heading("Morning Exercise Count"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addPages = data => {
   console.log(heading("Book Club Read Pages"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addStandWeight = data => {
   console.log(heading("Fruit Stand Weight"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addLaps = data => {
   console.log(heading("Jogging Laps Count"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addGymRoutine = data => {
   console.log(heading("Gym Routine Count"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addCandyNumber = data => {
   console.log(heading("Candy Distribution"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addTrainPassengerNumber = data => {
   console.log(heading("Train Car Passenger Check"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addGroceryQuantities = data => {
   console.log(heading("Weekly Grocery Tally"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addCoinsTally = data => {
   console.log(heading("Coin Collection Tally"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const combineWords = data => {
   console.log(heading("Words in Worksheets"));
-  console.log(data.flatMap(x => x).reduce(addElements, ""));
+  console.log(sumOfList(data, ""));
 };
 
 const addPushups = data => {
   console.log(heading("Session Of Pushups"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addDistances = data => {
   console.log(heading("Distance Records in Cycling Period"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const addParcelWeights = data => {
   console.log(heading("Parcel Weight Record in Courier Office"));
-  console.log(data.flatMap(x => x).reduce(addElements, 0));
+  console.log(sumOfList(data, 0));
 };
 
 const main = () => {
