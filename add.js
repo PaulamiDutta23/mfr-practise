@@ -34,6 +34,11 @@ const addDistributedPenNumber = function () {
   console.log([[2, 3], [1], [3, 2]].flatMap(x => x).reduce(addElements, 0));
 };
 
+const addRepititions = function () {
+  console.log(heading("Morning Exercise Count"));
+  console.log([[10, 20], [5], [15, 10]].flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
@@ -41,6 +46,7 @@ const main = function () {
   addWaterAmount();
   addCraneNumber();
   addDistributedPenNumber();
+  addRepititions();
 };
 
 main();
