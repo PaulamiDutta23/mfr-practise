@@ -140,6 +140,11 @@ const findUniqueRecipeIngredients = data => {
   console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const findUniqueToppings = data => {
+  console.log(heading("Chosen Toppings for Pizza"));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = () => {
   findUniqueConstellation([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]]);
   findUniqueBird(["sparrow", "crow", "sparrow", "eagle", "crow"]);
@@ -167,6 +172,7 @@ const main = () => {
   findUniqueBirdSpecies([["pigeon", "crow"], ["crow"], ["sparrow", "crow"]]);
   findUniqueIceCreamFlavor([["vanilla", "chocolate"], ["strawberry"], ["chocolate"]]);
   findUniqueRecipeIngredients([["salt", "water"], ["sugar", "water", "vegetables"]]);
+  findUniqueToppings([["cheese", "onion"], ["tomato"], ["cheese"]]);
 };
 
 main();
