@@ -89,6 +89,11 @@ const findUniqueGiftItems = function () {
   console.log([["toy", "sticker"], ["candy", "sticker"]].flat().filter(isDistinct));
 };
 
+const findUniqueParticipant = function () {
+  console.log(heading("Workshop Attendance"));
+  console.log([["Tom", "Jerry"], ["Jerry", "Spike"]].flat().filter(isDistinct));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -107,6 +112,7 @@ const main = function () {
   findUniqueOrderIngredient();
   findUniquePoetryWords();
   findUniqueGiftItems();
+  findUniqueParticipant();
 };
 
 main();
