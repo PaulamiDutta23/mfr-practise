@@ -59,6 +59,11 @@ const addGymRoutine = function () {
   console.log([[6, 4], [3, 2]].flat().reduce(addElements, 0));
 };
 
+const addCandyNumber = function () {
+  console.log(heading("Candy Distribution"));
+  console.log([[1, 2, 3], [2]].flat().reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
@@ -71,6 +76,7 @@ const main = function () {
   addStandWeight();
   addLaps();
   addGymRoutine();
+  addCandyNumber();
 };
 
 main();
