@@ -69,6 +69,11 @@ const findUniqueSnackServed = function () {
   console.log([["idli", "vada"], ["vada", "upma"]].flat().filter(isDistinct));
 };
 
+const findUniquePhotoThemes = function () {
+  console.log(heading("Photo Contest Entries"));
+  console.log([["sunset", "bird"], ["river"], ["sunset"]].flat().filter(isDistinct));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -83,6 +88,7 @@ const main = function () {
   findUniqueFlowersUsed();
   findUniqueStationNames();
   findUniqueSnackServed();
+  findUniquePhotoThemes();
 };
 
 main();
