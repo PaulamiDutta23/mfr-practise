@@ -8,9 +8,7 @@ const selectDistinct = (prevResult, element) => {
   return result;
 };
 
-const heading = function (text) {
-  return `\n${text}\n${"-".repeat(text.length)}\n`;
-};
+const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
 
 const findUniqueConstellation = data => {
   console.log(heading("Stargazing Log"));

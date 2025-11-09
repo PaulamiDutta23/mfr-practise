@@ -1,40 +1,30 @@
-const doesDoExist = element => element.includes("do");
+const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
 
-const doesSoExist = element => element.includes("so");
-
-const doesTurnExist = element => element.includes("turn");
-
-const doesExistAbove7 = element => element.some(x => x > 7);
-
-const heading = function (text) {
-  return `\n${text}\n${"-".repeat(text.length)}\n`;
-};
-
-const doesContainMusicalNote = function () {
+const doesContainMusicalNote = data => {
   console.log(heading("Music Reharshal Note"));
-  console.log([["mi", "fa", "so"], ["do", "mi"], ["fa"]].some(doesDoExist));
+  console.log(data.flatMap(x => x).some(element => element.includes("do")));
 };
 
-const doesContainMusicSequence = function () {
+const doesContainMusicSequence = data => {
   console.log(heading("Choir Harmony Review"));
-  console.log([["la", "la"], ["mi"], ["so", "la"]].some(doesSoExist));
+  console.log(data.flatMap(x => x).some(element => element.includes("so")));
 };
 
-const doesContainDanceStep = function () {
+const doesContainDanceStep = data => {
   console.log(heading("Dance Class Steps"));
-  console.log([["step", "tap"], ["turn", "step"]].some(doesTurnExist));
+  console.log(data.flatMap(x => x).some(element => element.includes("turn")));
 };
 
-const doesContainMeasurement = function () {
+const doesContainMeasurement = data => {
   console.log(heading("Fish Tank Measurement"));
-  console.log([[5, 6], [7], [6]].some(doesExistAbove7));
+  console.log(data.flatMap(x => x).some(x => x > 7));
 };
 
-const main = function () {
-  doesContainMusicalNote();
-  doesContainMusicSequence();
-  doesContainDanceStep();
-  doesContainMeasurement();
+const main = () => {
+  doesContainMusicalNote([["mi", "fa", "so"], ["do", "mi"], ["fa"]]);
+  doesContainMusicSequence([["la", "la"], ["mi"], ["so", "la"]]);
+  doesContainDanceStep([["step", "tap"], ["turn", "step"]]);
+  doesContainMeasurement([[5, 6], [7], [6]]);
 };
 
 main();
