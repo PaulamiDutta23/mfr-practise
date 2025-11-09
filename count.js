@@ -30,6 +30,11 @@ const countFruitLog = data => {
   console.log(data.reduce((x, y) => y === "banana" ? x + 1 : x, 0));
 };
 
+const countMosaicTiles = data => {
+  console.log(heading("Tiles in Mosaic"));
+  console.log(data.reduce((x, y) => y === "red" ? x + 1 : x, 0));
+};
+
 const main = () => {
   countfestivalRibbon(["red", "blue", "red", "green", "red", "blue"]);
   countReturnedBook(["Dune", "Dune", "Foundation", "Dune"]);
@@ -37,6 +42,7 @@ const main = () => {
   countIceCreamOrder([["vanilla", "chocolate"], ["strawberry"], ["chocolate"]]);
   countPlaylistTrack(["track1", "track2", "track1"]);
   countFruitLog(["banana", "apple", "mango", "banana"]);
+  countMosaicTiles(["green", "blue", "red", "yellow", "red"]);
 };
 
 main();

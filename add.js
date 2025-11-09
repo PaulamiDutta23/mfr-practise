@@ -87,6 +87,11 @@ const addPushups = data => {
   console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
+const addDistances = data => {
+  console.log(heading("Distance Records in Cycling Period"));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = () => {
   addCandyJarStock([[5, 3], [2], [4, 1]]);
   addMiles([[2, 3, 2], [4], [1, 1]]);
@@ -105,6 +110,7 @@ const main = () => {
   addCoinsTally([[1, 1, 2], [2, 1]]);
   combineWords([["hi", "good"], ["morning"], ["students"]]);
   addPushups([[10, 12], [5], [13, 10]]);
+  addDistances([[10], [25], [5, 7]]);
 };
 
 main();
