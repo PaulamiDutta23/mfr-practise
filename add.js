@@ -82,6 +82,11 @@ const combineWords = data => {
   console.log(data.flatMap(x => x).reduce(addElements, ""));
 };
 
+const addPushups = data => {
+  console.log(heading("Session Of Pushups"));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = () => {
   addCandyJarStock([[5, 3], [2], [4, 1]]);
   addMiles([[2, 3, 2], [4], [1, 1]]);
@@ -99,6 +104,7 @@ const main = () => {
   addGroceryQuantities([[3, 5], [2, 1]]);
   addCoinsTally([[1, 1, 2], [2, 1]]);
   combineWords([["hi", "good"], ["morning"], ["students"]]);
+  addPushups([[10, 12], [5], [13, 10]]);
 };
 
 main();
