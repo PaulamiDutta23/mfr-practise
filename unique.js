@@ -64,6 +64,11 @@ const findUniqueFlowersUsed = function () {
   console.log([["rose", "lily"], ["lily", "tulip"]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const findUniqueStationNames = function () {
+  console.log(heading("Train Station Annnouncements"));
+  console.log([["A", "B"], ["B", "C"], ["A"]].flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -76,6 +81,7 @@ const main = function () {
   findUniqueMovieTitle();
   findUniqueAttendees();
   findUniqueFlowersUsed();
+  findUniqueStationNames();
 };
 
 main();
