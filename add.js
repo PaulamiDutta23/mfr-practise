@@ -72,6 +72,11 @@ const addGroceryQuantities = data => {
   console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
+const addCoinsTally = data => {
+  console.log(heading("Coin Collection Tally"));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = () => {
   addCandyJarStock([[5, 3], [2], [4, 1]]);
   addMiles([[2, 3, 2], [4], [1, 1]]);
@@ -87,6 +92,7 @@ const main = () => {
   addCandyNumber([[1, 2, 3], [2]]);
   addTrainPassengerNumber([[10, 12], [15]]);
   addGroceryQuantities([[3, 5], [2, 1]]);
+  addCoinsTally([[1, 1, 2], [2, 1]]);
 };
 
 main();
