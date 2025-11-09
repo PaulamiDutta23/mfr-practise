@@ -30,6 +30,11 @@ const doesContainWord = data => {
   console.log(data.flatMap(x => x).some(element => element === "excellent"));
 };
 
+const doesContainScore = data => {
+  console.log(heading("Test Scores"));
+  console.log(data.flatMap(x => x).some(element => element > 90));
+};
+
 const main = () => {
   doesContainMusicalNote([["mi", "fa", "so"], ["do", "mi"], ["fa"]]);
   doesContainMusicSequence([["la", "la"], ["mi"], ["so", "la"]]);
@@ -37,6 +42,7 @@ const main = () => {
   doesContainMeasurement([[5, 6], [7], [6]]);
   doesContainExposure([2, 3], [1], [4, 2]);
   doesContainWord([["excellent", "good"], ["nice", "superb"], ["excellent"]]);
+  doesContainScore([72, 63], [90], [84, 52]);
 };
 
 main();
