@@ -35,6 +35,11 @@ const countMosaicTiles = data => {
   console.log(data.reduce((x, y) => y === "red" ? x + 1 : x, 0));
 };
 
+const countChapters = data => {
+  console.log(heading("Chapter Rereading"));
+  console.log(data.flatMap(x => x).reduce((x, y) => y === 1 ? x + 1 : x, 0));
+};
+
 const main = () => {
   countfestivalRibbon(["red", "blue", "red", "green", "red", "blue"]);
   countReturnedBook(["Dune", "Dune", "Foundation", "Dune"]);
@@ -43,6 +48,7 @@ const main = () => {
   countPlaylistTrack(["track1", "track2", "track1"]);
   countFruitLog(["banana", "apple", "mango", "banana"]);
   countMosaicTiles(["green", "blue", "red", "yellow", "red"]);
+  countChapters([[1, 2], [3, 4, 1], [2, 4, 1]]);
 };
 
 main();
