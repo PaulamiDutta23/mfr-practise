@@ -24,11 +24,17 @@ const addWaterAmount = function () {
   console.log([[1, 2, 1], [3], [2]].flatMap(x => x).reduce(addElements, 0));
 };
 
+const addCraneNumber = function () {
+  console.log(heading("Paper Crane Making"));
+  console.log([[3, 2], [1], [4]].flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
   addCrateWeight();
   addWaterAmount();
+  addCraneNumber();
 };
 
 main();
