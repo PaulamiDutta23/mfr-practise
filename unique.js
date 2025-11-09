@@ -130,6 +130,11 @@ const findUniqueBirdSpecies = data => {
   console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
+const findUniqueIceCreamFlavor = data => {
+  console.log(heading("Ice Cream Tasting Event"));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
+};
+
 const main = () => {
   findUniqueConstellation([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]]);
   findUniqueBird(["sparrow", "crow", "sparrow", "eagle", "crow"]);
@@ -155,6 +160,7 @@ const main = () => {
   findUniqueCookingSpices([["salt", "pepper"], ["turmeric"], ["salt"]]);
   findUniqueMovieGenre([["horror", "comedy"], ["thriller", "horror"], ["fantasy"]]);
   findUniqueBirdSpecies([["pigeon", "crow"], ["crow"], ["sparrow", "crow"]]);
+  findUniqueIceCreamFlavor([["vanilla", "chocolate"], ["strawberry"], ["chocolate"]]);
 };
 
 main();
