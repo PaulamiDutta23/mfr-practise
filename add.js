@@ -69,6 +69,11 @@ const addTrainPassengerNumber = function () {
   console.log([[10, 12], [15]].flat().reduce(addElements, 0));
 };
 
+const addGroceryQuantities = function () {
+  console.log(heading("Weekly Grocery Tally"));
+  console.log([[3, 5], [2, 1]].flat().reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
@@ -83,6 +88,7 @@ const main = function () {
   addGymRoutine();
   addCandyNumber();
   addTrainPassengerNumber();
+  addGroceryQuantities();
 };
 
 main();
