@@ -44,6 +44,11 @@ const addPages = function () {
   console.log([[12, 10], [5], [8, 7]].flat().reduce(addElements, 0));
 };
 
+const addStandWeight = function () {
+  console.log(heading("Fruit Stand Weight"));
+  console.log([[4, 3], [2], [3, 1]].flat().reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
@@ -53,6 +58,7 @@ const main = function () {
   addDistributedPenNumber();
   addRepititions();
   addPages();
+  addStandWeight();
 };
 
 main();
