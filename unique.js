@@ -1,124 +1,132 @@
-const isDistinct = (element, index, list) => index === list.indexOf(element);
+const selectDistinct = (prevResult, element) => {
+  const result = prevResult.slice();
+
+  if(!result.includes(element)) {
+    result.push(element);
+  }
+
+  return result;
+};
 
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
 
-const findUniqueConstellation = function () {
+const findUniqueConstellation = data => {
   console.log(heading("Stargazing Log"));
-  console.log([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueBird = function () {
+const findUniqueBird = data => {
   console.log(heading("Bird Watching"));
-  console.log(["sparrow", "crow", "sparrow", "eagle", "crow"].filter(isDistinct));
+  console.log(data.reduce(selectDistinct, []));
 };
 
-const findUniqueStudent = function () {
+const findUniqueStudent = data => {
   console.log(heading("Classroom Attendance Check"));
-  console.log([["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueColorsUsed = function () {
+const findUniqueColorsUsed = data => {
   console.log(heading("Art Workshop Color Variety"));
-  console.log([["blue", "yellow"], ["yellow", "green"], ["blue"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueLunchboxIngredient = function () {
+const findUniqueLunchboxIngredient = data => {
   console.log(heading("Lunchbox Ingredient Inventory"));
-  console.log([["rice", "lentils"], ["rice"], ["curd", "lentils"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueParcelSize = function () {
+const findUniqueParcelSize = data => {
   console.log(heading("Post Office Parcel Size"));
-  console.log(["small", "large", "medium", "small"].filter(isDistinct));
+  console.log(data.reduce(selectDistinct, []));
 };
 
-const findUniqueChapters = function () {
+const findUniqueChapters = data => {
   console.log(heading("Study Group Completion"));
-  console.log([[1, 2], [3], [2, 4, 1]].flatMap(x => x).filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const finduniqueFruitUsed = function () {
+const finduniqueFruitUsed = data => {
   console.log(heading("Fruit Basket Inventory"));
-  console.log([["apple", "banana"], ["apple"], ["apple", "orange"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 }; 
 
-const findUniqueMovieTitle = function () {
+const findUniqueMovieTitle = data => {
   console.log(heading("Movie Marathon Titles"));
-  console.log([["Inception", "Dunkirk"], ["Interstellar"], ["Inception"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueAttendees = function () {
+const findUniqueAttendees = data => {
   console.log(heading("Name Badge Sorting"));
-  console.log(["A", "B", "A", "C", "B"].filter(isDistinct));
+  console.log(data.reduce(selectDistinct, []));
 };
 
-const findUniqueFlowersUsed = function () {
+const findUniqueFlowersUsed = data => {
   console.log(heading("Flowers in Bouquets"));
-  console.log([["rose", "lily"], ["lily", "tulip"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueStationNames = function () {
+const findUniqueStationNames = data => {
   console.log(heading("Train Station Annnouncements"));
-  console.log([["A", "B"], ["B", "C"], ["A"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueSnackServed = function () {
+const findUniqueSnackServed = data => {
   console.log(heading("School Snack List"));
-  console.log([["idli", "vada"], ["vada", "upma"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniquePhotoThemes = function () {
+const findUniquePhotoThemes = data => {
   console.log(heading("Photo Contest Entries"));
-  console.log([["sunset", "bird"], ["river"], ["sunset"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueOrderIngredient = function () {
+const findUniqueOrderIngredient = data => {
   console.log(heading("Cafe Order Ingredients"));
-  console.log([["cheese", "bread"], ["tomato"], ["bread"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniquePoetryWords = function () {
+const findUniquePoetryWords = data => {
   console.log(heading("Strudent Poetry Words"));
-  console.log([["sky", "blue"], ["night"], ["sky", "dark"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueGiftItems = function () {
+const findUniqueGiftItems = data => {
   console.log(heading("Gift Box Items"));
-  console.log([["toy", "sticker"], ["candy", "sticker"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueParticipant = function () {
+const findUniqueParticipant = data => {
   console.log(heading("Workshop Attendance"));
-  console.log([["Tom", "Jerry"], ["Jerry", "Spike"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const findUniqueStars = function () {
+const findUniqueStars = data => {
   console.log(heading("Space Camp Star Names"));
-  console.log([["Vega", "Sirius"], ["Vega", "Rigel"]].flat().filter(isDistinct));
+  console.log(data.flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const main = function () {
-  findUniqueConstellation();
-  findUniqueBird();
-  findUniqueStudent();
-  findUniqueColorsUsed();
-  findUniqueLunchboxIngredient();
-  findUniqueParcelSize();
-  findUniqueChapters();
-  finduniqueFruitUsed();
-  findUniqueMovieTitle();
-  findUniqueAttendees();
-  findUniqueFlowersUsed();
-  findUniqueStationNames();
-  findUniqueSnackServed();
-  findUniquePhotoThemes();
-  findUniqueOrderIngredient();
-  findUniquePoetryWords();
-  findUniqueGiftItems();
-  findUniqueParticipant();
-  findUniqueStars();
+const main = () => {
+  findUniqueConstellation([["Orion", "Leo"], ["Taurus"], ["Orion", "Gemini"]]);
+  findUniqueBird(["sparrow", "crow", "sparrow", "eagle", "crow"]);
+  findUniqueStudent([["Asha", "Ravi", "Neel"], ["Ravi"], ["Asha", "Meera"]]);
+  findUniqueColorsUsed([["blue", "yellow"], ["yellow", "green"], ["blue"]]);
+  findUniqueLunchboxIngredient([["rice", "lentils"], ["rice"], ["curd", "lentils"]]);
+  findUniqueParcelSize(["small", "large", "medium", "small"]);
+  findUniqueChapters([[1, 2], [3], [2, 4, 1]]);
+  finduniqueFruitUsed([["apple", "banana"], ["apple"], ["apple", "orange"]]);
+  findUniqueMovieTitle([["Inception", "Dunkirk"], ["Interstellar"], ["Inception"]]);
+  findUniqueAttendees(["A", "B", "A", "C", "B"]);
+  findUniqueFlowersUsed([["rose", "lily"], ["lily", "tulip"]]);
+  findUniqueStationNames([["A", "B"], ["B", "C"], ["A"]]);
+  findUniqueSnackServed([["idli", "vada"], ["vada", "upma"]]);
+  findUniquePhotoThemes([["sunset", "bird"], ["river"], ["sunset"]]);
+  findUniqueOrderIngredient([["cheese", "bread"], ["tomato"], ["bread"]]);
+  findUniquePoetryWords(["sky", "blue"], ["night"], ["sky", "dark"]);
+  findUniqueGiftItems([["toy", "sticker"], ["candy", "sticker"]]);
+  findUniqueParticipant([["Tom", "Jerry"], ["Jerry", "Spike"]]);
+  findUniqueStars([["Vega", "Sirius"], ["Vega", "Rigel"]]);
 };
 
 main();
