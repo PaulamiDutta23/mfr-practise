@@ -25,12 +25,18 @@ const doesContainExposure = data => {
   console.log(data.flatMap(x => x).some(element => element === 4));
 };
 
+const doesContainWord = data => {
+  console.log(heading("Collection of Words"));
+  console.log(data.flatMap(x => x).some(element => element === "excellent"));
+};
+
 const main = () => {
   doesContainMusicalNote([["mi", "fa", "so"], ["do", "mi"], ["fa"]]);
   doesContainMusicSequence([["la", "la"], ["mi"], ["so", "la"]]);
   doesContainDanceStep([["step", "tap"], ["turn", "step"]]);
   doesContainMeasurement([[5, 6], [7], [6]]);
   doesContainExposure([2, 3], [1], [4, 2]);
+  doesContainWord([["excellent", "good"], ["nice", "superb"], ["excellent"]]);
 };
 
 main();
