@@ -1,8 +1,3 @@
-const blueCount = (prevCount, element) => {
-  const count = element === "blue" ? prevCount + 1 : prevCount;
-  return count;
-};
-
 const selectDistinct = (result, element) => {
   if (!result.includes(element)) {
     result.push(element);
@@ -16,26 +11,10 @@ const doesDoExist = element => element.includes("do");
 
 const doAllLesser32 = element => element.every(x => x < 32);
 
-const countDune = (prevCount, element) => {
-  const count = element === "Dune" ? prevCount + 1 : prevCount;
-  return count;
-};
-
 const doesSoExist = element => element.includes("so");
-
-const countDeer = (prevCount, element) => {
-  const count = element === "deer" ? prevCount + 1 : prevCount;
-  return count;
-};
 
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
-};
-
-const countfestivalRibbon = function () {
-  console.log(heading("Festival Ribbon Count"));
-  console.log(["red", "blue", "red", "green", "red", "blue"].reduce(blueCount, 0));
-  console.log(["red", "blue", "red", "blue", "red", "blue"].reduce(blueCount, 0));
 };
 
 const findUniqueConstellation = function () {
@@ -78,11 +57,6 @@ const findUniqueColorsUsed = function () {
   console.log([["blue", "yellow"], ["yellow", "green"], ["blue"]].flatMap(x => x).reduce(selectDistinct, []));
 };
 
-const countReturnedBook = function () {
-  console.log(heading("Library Return Counter"));
-  console.log(["Dune", "Dune", "Foundation", "Dune"].reduce(countDune, 0));
-};
-
 const findUniqueLunchboxIngredient = function () {
   console.log(heading("Lunchbox Ingredient Inventory"));
   console.log([["rice", "lentils"], ["rice"], ["curd", "lentils"]].flatMap(x => x).reduce(selectDistinct, [])); 
@@ -103,13 +77,7 @@ const findUniqueParcelSize = function () {
   console.log(["small", "large", "medium", "small"].reduce(selectDistinct, []));
 };
 
-const countWildlifeSighting = function () {
-  console.log(heading("Wildlife Sighting"));
-  console.log(["deer", "deer", "rabbit", "deer"].reduce(countDeer, 0));
-};
-
 const main = function () {
-  countfestivalRibbon();
   findUniqueConstellation();
   findUniqueBird();
   findUniqueStudent();
@@ -118,12 +86,10 @@ const main = function () {
   doAllTemperatureSheetContainLesser32();
   addMiles();
   findUniqueColorsUsed();
-  countReturnedBook();
   findUniqueLunchboxIngredient();
   doesContainMusicSequence();
   addCrateWeight();
   findUniqueParcelSize();
-  countWildlifeSighting();
 };
 
 main();
