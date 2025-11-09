@@ -1,9 +1,3 @@
-const areAllBelow32 = element => element.every();
-
-const areAllPositive = element => element.every();
-
-const areAllBelow120 = element => element.every();
-
 const heading = text => `\n${text}\n${"-".repeat(text.length)}\n`;
 
 const doAllTemperatureSheetContainBelow32 = data => {
