@@ -13,6 +13,11 @@ const countDeer = (prevCount, element) => {
   return count;
 };
 
+const countChocolate = (prevCount, element) => {
+  const count = element.includes("chocolate") ? prevCount + 1 : prevCount;
+  return count;
+};
+
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
@@ -32,10 +37,16 @@ const countWildlifeSighting = function () {
   console.log(["deer", "deer", "rabbit", "deer"].reduce(countDeer, 0));
 };
 
+const countIceCreamOrder = function () {
+  console.log(heading("Ice Cream Orders"));
+  console.log([["vanilla", "chocolate"], ["strawberry"], ["chocolate"]].reduce(countChocolate, 0));
+};
+
 const main = function () {
   countfestivalRibbon();
   countReturnedBook();
   countWildlifeSighting();
+  countIceCreamOrder();
 };
 
 main();
