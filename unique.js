@@ -64,6 +64,11 @@ const findUniqueStationNames = function () {
   console.log([["A", "B"], ["B", "C"], ["A"]].flat().filter(isDistinct));
 };
 
+const findUniqueSnackServed = function () {
+  console.log(heading("School Snack List"));
+  console.log([["idli", "vada"], ["vada", "upma"]].flat().filter(isDistinct));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -77,6 +82,7 @@ const main = function () {
   findUniqueAttendees();
   findUniqueFlowersUsed();
   findUniqueStationNames();
+  findUniqueSnackServed();
 };
 
 main();
