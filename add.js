@@ -64,6 +64,11 @@ const addCandyNumber = function () {
   console.log([[1, 2, 3], [2]].flat().reduce(addElements, 0));
 };
 
+const addTrainPassengerNumber = function () {
+  console.log(heading("Train Car Passenger Check"));
+  console.log([[10, 12], [15]].flat().reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
@@ -77,6 +82,7 @@ const main = function () {
   addLaps();
   addGymRoutine();
   addCandyNumber();
+  addTrainPassengerNumber();
 };
 
 main();
