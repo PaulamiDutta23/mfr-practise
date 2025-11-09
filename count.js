@@ -13,10 +13,13 @@ const countDeer = (prevCount, element) => {
   return count;
 };
 
+const heading = function (text) {
+  return `\n${text}\n${"-".repeat(text.length)}\n`;
+};
+
 const countfestivalRibbon = function () {
   console.log(heading("Festival Ribbon Count"));
   console.log(["red", "blue", "red", "green", "red", "blue"].reduce(blueCount, 0));
-  console.log(["red", "blue", "red", "blue", "red", "blue"].reduce(blueCount, 0));
 };
 
 const countReturnedBook = function () {
