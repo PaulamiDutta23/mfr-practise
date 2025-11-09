@@ -84,6 +84,11 @@ const findUniquePoetryWords = function () {
   console.log([["sky", "blue"], ["night"], ["sky", "dark"]].flat().filter(isDistinct));
 };
 
+const findUniqueGiftItems = function () {
+  console.log(heading("Gift Box Items"));
+  console.log([["toy", "sticker"], ["candy", "sticker"]].flat().filter(isDistinct));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -101,6 +106,7 @@ const main = function () {
   findUniquePhotoThemes();
   findUniqueOrderIngredient();
   findUniquePoetryWords();
+  findUniqueGiftItems();
 };
 
 main();
