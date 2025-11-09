@@ -74,6 +74,11 @@ const findUniquePhotoThemes = function () {
   console.log([["sunset", "bird"], ["river"], ["sunset"]].flat().filter(isDistinct));
 };
 
+const findUniqueOrderIngredient = function () {
+  console.log(heading("Cafe Order Ingredients"));
+  console.log([["cheese", "bread"], ["tomato"], ["bread"]].flat().filter(isDistinct));
+};
+
 const main = function () {
   findUniqueConstellation();
   findUniqueBird();
@@ -89,6 +94,7 @@ const main = function () {
   findUniqueStationNames();
   findUniqueSnackServed();
   findUniquePhotoThemes();
+  findUniqueOrderIngredient();
 };
 
 main();
