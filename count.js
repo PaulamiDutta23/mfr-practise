@@ -18,6 +18,11 @@ const countChocolate = (prevCount, element) => {
   return count;
 };
 
+const countTrack1 = (prevCount, element) => {
+  const count = element === "track1" ? prevCount + 1 : prevCount;
+  return count;
+};
+
 const heading = function (text) {
   return `\n${text}\n${"-".repeat(text.length)}\n`;
 };
@@ -42,11 +47,17 @@ const countIceCreamOrder = function () {
   console.log([["vanilla", "chocolate"], ["strawberry"], ["chocolate"]].reduce(countChocolate, 0));
 };
 
+const countPlaylistTrack = function () {
+  console.log(heading("Music Playlist Repeats"));
+  console.log(["track1", "track2", "track1"].reduce(countTrack1, 0));
+};
+
 const main = function () {
   countfestivalRibbon();
   countReturnedBook();
   countWildlifeSighting();
   countIceCreamOrder();
+  countPlaylistTrack();
 };
 
 main();
