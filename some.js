@@ -35,6 +35,11 @@ const doesContainScore = data => {
   console.log(data.flatMap(x => x).some(element => element > 90));
 };
 
+const doesContainNoteInMusicSheet = data => {
+  console.log(heading("Music Note Sheet"));
+  console.log(data.flatMap(x => x).some(element => element === "fa"));
+};
+
 const main = () => {
   doesContainMusicalNote([["mi", "fa", "so"], ["do", "mi"], ["fa"]]);
   doesContainMusicSequence([["la", "la"], ["mi"], ["so", "la"]]);
@@ -43,6 +48,7 @@ const main = () => {
   doesContainExposure([2, 3], [1], [4, 2]);
   doesContainWord([["excellent", "good"], ["nice", "superb"], ["excellent"]]);
   doesContainScore([72, 63], [90], [84, 52]);
+  doesContainNoteInMusicSheet([["mi", "fa", "so"], ["do", "mi"], ["fa"]]);
 };
 
 main();
