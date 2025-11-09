@@ -54,6 +54,11 @@ const addLaps = function () {
   console.log([[2, 3, 2], [1], [4]].flat().reduce(addElements, 0));
 };
 
+const addGymRoutine = function () {
+  console.log(heading("Gym Routine Count"));
+  console.log([[6, 4], [3, 2]].flat().reduce(addElements, 0));
+};
+
 const main = function () {
   addCandyJarStock();
   addMiles();
@@ -65,6 +70,7 @@ const main = function () {
   addPages();
   addStandWeight();
   addLaps();
+  addGymRoutine();
 };
 
 main();
