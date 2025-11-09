@@ -92,6 +92,11 @@ const addDistances = data => {
   console.log(data.flatMap(x => x).reduce(addElements, 0));
 };
 
+const addParcelWeights = data => {
+  console.log(heading("Parcel Weight Record in Courier Office"));
+  console.log(data.flatMap(x => x).reduce(addElements, 0));
+};
+
 const main = () => {
   addCandyJarStock([[5, 3], [2], [4, 1]]);
   addMiles([[2, 3, 2], [4], [1, 1]]);
@@ -111,6 +116,7 @@ const main = () => {
   combineWords([["hi", "good"], ["morning"], ["students"]]);
   addPushups([[10, 12], [5], [13, 10]]);
   addDistances([[10], [25], [5, 7]]);
+  addParcelWeights([[2, 3], [5], [3, 2]]);
 };
 
 main();
